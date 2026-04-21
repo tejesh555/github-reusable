@@ -4,6 +4,7 @@ on:
    inputs:
      DB_USERNAME:
       required: true 
+    secrets:
      DB_PASS:
       required: false
      
@@ -12,7 +13,7 @@ jobs:
     runs-on: self-hosted
     env:
       DB_USERNAME: ${{ inputs.DB_USERNAME }}
-      DB_PASSWORD: ${{ inputs.DB_PASS }}
+      DB_PASSWORD: ${{ secrets.DB_PASS }}
     steps:
       - name: clone the repo
         uses: actions/checkout@v4
