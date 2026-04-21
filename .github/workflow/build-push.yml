@@ -4,9 +4,11 @@ on:
    inputs:
      DB_USERNAME:
       required: true 
+      type: string
     secrets:
      DB_PASS:
       required: false
+      type: string
      
 jobs:
   build-push:
