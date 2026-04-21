@@ -3,8 +3,7 @@ on:
  workflow_call:
    inputs:
      DB_USERNAME:
-      required: true
-   secrets: 
+      required: true 
      DB_PASS:
       required: false
      
@@ -12,8 +11,8 @@ jobs:
   build-push:
     runs-on: self-hosted
     env:
-      DB_USERNAME: ${{ vars.DB_USERNAME }}
-      DB_PASSWORD: ${{ secrets.DB_PASS }}
+      DB_USERNAME: ${{ inputs.DB_USERNAME }}
+      DB_PASSWORD: ${{ inputs.DB_PASS }}
     steps:
       - name: clone the repo
         uses: actions/checkout@v4
