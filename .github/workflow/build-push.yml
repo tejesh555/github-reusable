@@ -4,7 +4,9 @@ on:
    inputs:
      DB_USERNAME:
       required: true
-   secrets: inherit
+   secrets: 
+     DB_PASS:
+      required: false
      
 jobs:
   build-push:
