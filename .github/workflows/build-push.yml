@@ -8,7 +8,6 @@ on:
     secrets:
      DB_PASS:
       required: false
-      type: string
      
 jobs:
   build-push:
